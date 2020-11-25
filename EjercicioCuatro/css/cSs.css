@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face{
+    font-family: Blastimo;
+    src: url(fuentes/BlastimoSwash.ttf);
+}
+header{
+    font-family: Blastimo;
+    color: black;
+    text-align: center;
+    background-color: antiquewhite;
+    height: 90px;
+    
+}
+img{
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    float: left; 
+    margin-left: 20px;
+}
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    margin: 40px;
+}
+#contenedor{
+    
+    display: flexbox;
+    width: 100%;
+    height: 800px;
+    margin-left: 30px;
+     
+    
+
+}
+.item{
+    
+    width: 400px;
+    height: 200px;
+    float: left;
+}
+#content-2{
+    background: blue;
+    /*width: 400px;
+    height: 400px;*/
+}
+#content-1{
+    background-color: green;
+
+    
+    
+    
+    
+}
+#content-2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+#btn{
+    background: greenyellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+    
+    
+}
+label{
+    display: block;
+    padding: 5px;
+    color: yellow;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+input{
+    margin-left: 20px;
+}
+#panel{
+    text-align: center;
+}
+#resultado{
+    text-align: center;
+    margin-left: 120px;
+}
