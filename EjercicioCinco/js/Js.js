@@ -1,6 +1,9 @@
 
 
 let cantidad = 10;
+let cantidadPositiva = 0;
+let cantidadNegativa = 0;
+let cantidadCero = 0;
 
 function calcular() {
     sumar(cantidad);
@@ -17,66 +20,88 @@ function calcular2() {
 
 
 function sumar(p1) {
+
     let contador = 0;
-    let acumulador = 0;
     let numero = 0;
+
     while (contador < p1) {
-        numero = Number(prompt('Digite Numero '+(contador + 1)));
-        if (numero > 0 ) {
+        numero = Number(prompt('Digite Numero ' + (contador + 1)));
+        if (numero > 0) {
             contador++;
-            document.getElementById('resultado').value+=numero+', ';
-
-
-        } 
-        else if(numero == 0){
-            contador++;
-            document.getElementById('resultado1').value+=numero+', ';
+            cantidadPositiva += 1;
+            document.getElementById('resultado').value += numero + ', ';
+            document.getElementById("cantidad").value = cantidadPositiva;
         }
-        else{
+        else if (numero == 0) {
             contador++;
-            document.getElementById('resultado2').value+=numero+', ';
-
+            document.getElementById('resultado1').value += numero + ', ';
+            cantidadCero += 1;
+            document.getElementById("cero").value = cantidadCero;
+        }
+        else {
+            contador++;
+            document.getElementById('resultado2').value += numero + ', ';
+            cantidadNegativa += 1;
+            document.getElementById("negativo").value = cantidadNegativa;
         }
     }
-
-  
-return acumulador;
+    return 0;
 }
 
 
 function sumar1(p1) {
+
     let contador = 0;
-    let acumulador = 0;
     let numero = 0;
+
     do {
         numero = Number(prompt('Digite numero ' + (contador + 1)));
         if (numero > 0) {
             contador++;
-            document.getElementById('resultado').value+=numero+', ';
+            document.getElementById('resultado').value += numero + ', ';
+            document.getElementById("cantidad").value = cantidadPositiva += 1;
 
-        } else {
-            alert('El Numero es negativo')
+        } else if (numero == 0) {
+            contador++;
+            document.getElementById('resultado1').value += numero + ', ';
+            document.getElementById("cero").value = cantidadCero += 1;
 
         }
+        else {
+            contador++;
+            document.getElementById('resultado2').value += numero + ', ';
+            document.getElementById("negativo").value = cantidadNegativa += 1;
+        }
     } while (contador < p1)
-return acumulador;
+    return 0;
 }
 
 
-function sumar2(p1) {
-    let acumulador = 0;
-    let numero = 0;
+function sumar2(p1) {  
 
-    for (let i = 0; i < p1; i++) {
-        numero = Number(prompt('Digite Numero positivo ' + (i + 1)));
-        if (numero > 0 ) {
-            document.getElementById('resultado').value+=numero+', ';
-            
+    let numero = 0; 
 
-        } else {
-            alert('El numero es negativo!')
+    for(let i = 0; i < p1; i++){
 
+        numero = Number(prompt('Digite numero ' + (i + 1)));
+
+        if ( numero > 0 ){
+
+            document.getElementById('resultado').value += numero + ', ';
+            document.getElementById("cantidad").value = cantidadPositiva += 1;            
         }
+        else if( numero == 0 ){
+            
+            document.getElementById('resultado1').value += numero + ', ';
+            document.getElementById("cero").value = cantidadCero += 1;
+        }
+        else{
+            
+            document.getElementById('resultado2').value += numero + ', ';
+            document.getElementById("negativo").value = cantidadNegativa += 1;
+        }
+
     }
-return acumulador;
+
+    return 0;
 }
