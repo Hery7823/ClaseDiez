@@ -1,92 +1,122 @@
 
 'use strict'
 
-let numero = 3;
-let nombre1=['Hugo',22];
-let nombre2=['Paco',12];
-let nombre3=['Luis',30];
-let basePersonas=[nombre1,nombre2,nombre3];
+
 function calcular() {
     
-    sumar(numero);
+    sumar();
 }
 
 
 function calcular1() {
         
-    sumar1(numero);
+    sumar1();
 }
 
-function calcular2() {
-        
-    sumar2(basePersonas);
-}
-
-
-function sumar(p1) {
-
-    let contador = 1;
-    document.getElementById("name").innerHTML+=p1;    
-
-    while (contador <= 10) {
-
-        document.getElementById('resultado').innerHTML+="| "+contador+"x"+p1+"="+p1*contador+" ";
-        contador++;    
-    }
-
-    return 0;
+function calcular2() 
+{
+   sumar2();       
+    
 }
 
 
-function sumar1(p1) {
+function sumar()
+{
 
-    let contador = 1;
-    document.getElementById("name").innerHTML+=p1;    
+    let contador = 0;      
 
-    do {        
+    while (contador < 3)
+    {
+        let nombre = prompt('Por favor ingrese su nombre: Usuario: '+(contador+1));
+        let edad = Number(prompt('Por favor ingrese su edad:'));
+        if( edad <18 )
+        {
+            document.getElementById('resultado').innerHTML='Nombre: '+nombre+' edad: '+edad+'     años Es menor de edad'
+            alert('Nombre: '+nombre+' Es menor de edad ');
+            break;
+        }
+        else
+        {
+            contador++;
+        }        
         
-        document.getElementById('resultado').innerHTML+="| "+contador+"x"+p1+"="+p1*contador+" ";
-        contador++;
     
-    } while (contador <= 10)
-
-    return 0;
-}
-
-
-function sumar2(basePersonas) {  
-
-    
-    
-   
-    
-
-    for(let c = 0; c < basePersonas.length; c++){
-        
-      
-        if(basePersonas[0][c]< 12){
-            console.log(basePersonas[0][c]);
-        }           
-        
-
-      }
-        
-
-
-        
-        /*if(edad2 < 18){
-                document.getElementById('name').innerHTML='Ciclo '+i+' Nombre = '+nombre2+' Edad = '+edad2;
-                break;
-        }else if(edad2 < 18){
-                document.getElementById('name').innerHTML='Ciclo '+i+' Nombre = '+nombre2+' Edad = '+edad2;
-        } */             
+        if(contador == 3)
+        {
+            document.getElementById('resultado').innerHTML='No hay menores de edad'
+            alert('No hay ningun menor de edad');
+        }  
             
-
-        
-        
-
-        
     }
+    return 0;
+}
+
+
+function sumar1() 
+{
+
+    let contador = 0;
+
+    do 
+    {        
+        let nombre = prompt('Por favor ingrese su nombre: Usuario: '+(contador+1));
+        let edad = Number(prompt('Por favor ingrese su edad:'));
+        if( edad <18 )
+        {
+            document.getElementById('resultado').innerHTML='Nombre: '+nombre+' edad: '+edad+'     años Es menor de edad'
+            alert('Nombre: '+nombre+' Es menor de edad ');
+            break;
+        }
+        else
+        {
+            contador++;
+        }        
+        
+    
+        if(contador == 3)
+        {
+            document.getElementById('resultado').innerHTML='No hay menores de edad'
+            alert('No hay ningun menor de edad');
+        }        
+    
+    }while (contador < 3)
 
     return 0;
 }
+
+
+
+
+function sumar2() 
+{  
+    let contador =0;
+    for(let i=0; i<3; i++)
+    {
+      
+
+        let nombre = prompt('Por favor ingrese su nombre: Usuario: '+(contador+1));
+        let edad = Number(prompt('Por favor ingrese su edad:'));
+        if( edad <18 )
+        {
+            document.getElementById('resultado').innerHTML='Nombre: '+nombre+' edad: '+edad+'     años Es menor de edad'
+            alert('Nombre: '+nombre+' Es menor de edad ');
+            break;
+        }
+        else
+        {
+            contador++;
+        }
+        
+         
+        
+        
+    } 
+    if(contador == 3)
+    {
+        document.getElementById('resultado').innerHTML='No hay menores de edad'
+        alert('No hay ningun menor de edad');
+    }
+    
+        
+    return 0; 
+}    
