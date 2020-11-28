@@ -21,6 +21,7 @@ function calcular()
                document.getElementById('name').innerHTML='El factorial de: '+numero+' es: '+factorial; 
                
                document.getElementById('resultado').innerHTML+=' = '+factorial; 
+               contador = 1;
         
         } 
     }
@@ -44,6 +45,7 @@ function calcular1()
         
                document.getElementById('name').innerHTML='El factorial de: '+numero+' es: '+factorial; 
                document.getElementById('resultado').innerHTML+=' = '+factorial; 
+               contador=1;
         
         } 
     }while( contador <= 0 )
