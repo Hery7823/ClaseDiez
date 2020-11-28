@@ -1,4 +1,4 @@
-
+﻿
 
 let codigo = 0;
 let contrasena=0;
@@ -12,7 +12,7 @@ function calcular() {
 function calcular1() {
     codigo = Number(prompt('Ingrese el codigo de usuario'));   
     contrasena = Number(prompt('Ingrese la contraseña de usuario')); 
-    sumar2(codigo,contrasena);
+    sumar1(codigo,contrasena);
 }
 
 function calcular2() {
